@@ -9,7 +9,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 // TRENDING
 export const fetchTrending = async (timeWindow = "day") => {
   const { data } = await axios.get(
-    `${baseUrl}/trending/all/${timeWindow}?api_key=5795d1c278fd13c312787424487a6baf`
+    `${baseUrl}/trending/all/${timeWindow}?api_key=${apiKey}`
   );
 
   return data?.results;
@@ -18,7 +18,7 @@ export const fetchTrending = async (timeWindow = "day") => {
 // MOVIES & SERIES - Details
 
 export const fetchDetails = async (type, id) => {
-  const res = await axios.get(`${baseUrl}/${type}/${id}?api_key=5795d1c278fd13c312787424487a6baf`);
+  const res = await axios.get(`${baseUrl}/${type}/${id}?api_key=${apiKey}`);
   return res?.data;
 };
 
@@ -26,7 +26,7 @@ export const fetchDetails = async (type, id) => {
 
 export const fetchCredits = async (type, id) => {
   const res = await axios.get(
-    `${baseUrl}/${type}/${id}/credits?api_key=5795d1c278fd13c312787424487a6baf`
+    `${baseUrl}/${type}/${id}/credits?api_key=${apiKey}`
   );
   return res?.data;
 };
@@ -35,7 +35,7 @@ export const fetchCredits = async (type, id) => {
 
 export const fetchVideos = async (type, id) => {
   const res = await axios.get(
-    `${baseUrl}/${type}/${id}/videos?api_key=5795d1c278fd13c312787424487a6baf`
+    `${baseUrl}/${type}/${id}/videos?api_key=${apiKey}`
   );
   return res?.data;
 };
@@ -44,14 +44,14 @@ export const fetchVideos = async (type, id) => {
 
 export const fetchMovies = async (page, sortBy) => {
   const res = await axios.get(
-    `${baseUrl}/discover/movie?api_key=5795d1c278fd13c312787424487a6baf&page=${page}&sort_by=${sortBy}`
+    `${baseUrl}/discover/movie?api_key=${apiKey}&page=${page}&sort_by=${sortBy}`
   );
   return res?.data;
 };
 
 export const fetchTvSeries = async (page, sortBy) => {
   const res = await axios.get(
-    `${baseUrl}/discover/tv?api_key=5795d1c278fd13c312787424487a6baf&page=${page}&sort_by=${sortBy}`
+    `${baseUrl}/discover/tv?api_key=${apiKey}&page=${page}&sort_by=${sortBy}`
   );
   return res?.data;
 };
@@ -60,7 +60,7 @@ export const fetchTvSeries = async (page, sortBy) => {
 
 export const searchData = async (query, page) => {
   const res = await axios.get(
-    `${baseUrl}/search/multi?api_key=5795d1c278fd13c312787424487a6baf&query=${query}&page=${page}`
+    `${baseUrl}/search/multi?api_key=${apiKey}&query=${query}&page=${page}`
   );
   return res?.data
 };
