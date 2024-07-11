@@ -72,6 +72,3 @@ Enhance your movie discovery experience with dynamic searching, powered by TMDB 
 
 **Live Deployed Link:** [FilmSphere Live](https://film-sphere.vercel.app/)
 
-## Contribute
-
-FilmSphere is open-source, and we welcome contributions from the community. Feel free to submit bug reports, feature requests, or pull requests to help us improve FilmSphere together.
